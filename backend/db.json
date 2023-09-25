@@ -1,10 +1,10 @@
 {
     "portfolio": [
-        {"id": 1, "name": "Bitcoin", "quantity": 2.5, "price": 26600 },
-        {"id": 2, "name": "Ethereum", "quantity": 10, "price": 1558 },
-        {"id": 3, "name": "TetherUSD", "quantity": 1000, "price": 1 },
-        {"id": 4, "name": "Litecoin", "quantity": 100, "price": 64 },
-        {"id": 5, "name": "Dogecoin", "quantity": 3300, "price": 0.065 },
-        {"id": 6, "name": "Cardano", "quantity": 50000, "price": 0.2445}
+        {"id": 1, "name": "Bitcoin", "quantity": 0, "price": 26600 },
+        {"id": 2, "name": "Ethereum", "quantity": 0, "price": 1558 },
+        {"id": 3, "name": "TetherUSD", "quantity": 0, "price": 1 },
+        {"id": 4, "name": "Litecoin", "quantity": 0, "price": 64 },
+        {"id": 5, "name": "Dogecoin", "quantity": 0, "price": 0.065 },
+        {"id": 6, "name": "Cardano", "quantity": 0, "price": 0.2445}
     ]
 }
