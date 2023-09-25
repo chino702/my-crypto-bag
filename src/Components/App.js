@@ -8,8 +8,8 @@ function App() {
   return(
     <Router>
       <Switch>
-        <Route exact path="/dashboard" Component={Dashboard} />
-        <Route exact path="/add-asset" Component={AddAssetForm} />
+        <Route exact path="/dashboard" component={Dashboard} />
+        <Route exact path="/add-asset" component={AddAssetForm} />
         <Redirect to="./dashboard"/>
       </Switch>
     </Router>
