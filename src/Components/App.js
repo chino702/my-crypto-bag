@@ -1,21 +1,21 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import Dashboard from "./Dashboard";
-import AddAssetForm from "./AddAssetForm";
+import AddCryptoForm from "./AddCryptoForm";
 import NavBar from "./NavBar";
 
+
 function App() {
-  return(
+  return (
     <Router>
       <NavBar/>
-      <Switch>
-        <Route exact path="/dashboard" component={Dashboard} />
-        <Route exact path="/add-asset" component={AddAssetForm} />
-        <Redirect to="/dashboard"/>
-      </Switch>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/add-asset" element={<AddCryptoForm />} />
+        <Route path="/" element={<Navigate to="/dashboard" />} />
+      </Routes>
     </Router>
   );
 }
-
 
 export default App;
