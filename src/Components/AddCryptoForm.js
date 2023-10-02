@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./AddCryptoForm.css"; 
 
 function AddCryptoForm() {
   const [formData, setFormData] = useState({ name: "", quantity: "", price: "" });
