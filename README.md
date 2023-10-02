@@ -1,3 +1,100 @@
+# Crypto Portfolio Tracker App: My Crypto Bag 
+
+A web application for managing and tracking your cryptocurrency portfolio. Add and Remove cryptocurrencies to create a portfolio. This is just a demo project built from react for my school. This does NOT track live price of cryptocurrencies, Instead you add the price and quantities to track your current value.
+
+## Table of Contents
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Built With](#built-with)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+
+
+## Features
+
+- Add cryptocurrencies to your portfolio.
+- Remove cryptocurrencies from your portfolio.
+- View and manage your cryptocurrency holdings.
+- Responsive design for various screen sizes.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine.
+
+### Prerequisites
+
+- Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/chino702/my-crypto-bag.git
+
+2. Navigate to the project directory:
+
+   cd my-crypto-bag
+   
+3. Install the project dependencies:
+
+   npm install
+
+4. Run the Frontend:
+
+   npm start
+
+ The frontend should now be running on http://localhost:3001.
+
+--------------------------------------------------------------
+
+## Backend Setup
+
+This project uses a backend server to store cryptocurrency data. Follow these steps to set up the backend:
+
+1. Navigate to the `backend` directory:
+
+   cd backend
+
+2. Install the backend dependencies:
+
+  npm install
+
+3. start the backend server:
+
+  json-server --watch db.json --port 3000
+
+The backend server should now be running on http://localhost:3000. The frontend will automatically make requests to this backend when interacting with the app.
+
+--------------------------------------------------------------
+
+**Usage**
+
+Access the app via the provided URL or by running it locally.
+Use the navigation bar to switch between different sections of the app.
+Add cryptocurrencies to your portfolio by filling out the "Add Cryptocurrency" form.
+Remove cryptocurrencies from your portfolio using the "Remove Cryptocurrency" form.
+View your portfolio on the dashboard.
+
+--------------------------------------------------------------
+
+**Built With**
+
+React - JavaScript library for building user interfaces.
+React Router - Routing for React applications.
+Db.json - A JSON file used for storing cryptocurrency data.
+CSS - css files were used to style the project.
+
+--------------------------------------------------------------
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+--------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
