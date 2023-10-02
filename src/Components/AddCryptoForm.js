@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function AddAssetForm() {
+function AddCryptoForm() {
   const [formData, setFormData] = useState({ name: "", quantity: "", price: "" });
 
   const handleInputChange = (e) => {
@@ -18,11 +18,11 @@ function AddAssetForm() {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("New asset data:", data);
+        console.log("New crypto data:", data);
         // Reset the form after successful submission
         setFormData({ name: "", quantity: "", price: "" });
       })
-      .catch((error) => console.error("Error adding asset:", error));
+      .catch((error) => console.error("Error adding crypto:", error));
   };
 
   return (
@@ -56,10 +56,10 @@ function AddAssetForm() {
             onChange={handleInputChange}
           />
         </div>
-        <button type="submit">Add Asset</button>
+        <button type="submit">Add Cryptocurrency</button>
       </form>
     </div>
   );
 }
 
-export default AddAssetForm;
+export default AddCryptoForm;

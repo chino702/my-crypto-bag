@@ -18,7 +18,7 @@ function Dashboard() {
       <ul>
         {portfolioData.map((asset, index) => (
           <li key={index}>
-            {asset.name} - Quantity: {asset.quantity}, Price: ${asset.price}
+            {asset.name} - Quantity: {asset.quantity}, Price: ${asset.price}, Value: ${asset.quantity * asset.price}
           </li>
         ))}
       </ul>

@@ -10,7 +10,10 @@ function NavBar() {
                     <Link to="/dashboard">Dashboard</Link>
                 </li>
                 <li>
-                    <Link to="/add-asset">Add Asset</Link>
+                    <Link to="/add-crypto">Add Crypto</Link>
+                </li>
+                <li>
+                    <Link to="/remove-crypto">Remove Crypto</Link>
                 </li>
             </ul>
         </nav>
