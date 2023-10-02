@@ -27,9 +27,9 @@ function AddCryptoForm() {
   };
 
   return (
-    <div>
+    <div className="add-crypto-form-container">
       <h2>Add Cryptocurrency</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="add-crypto-form">
         <div>
           <label>Name:</label>
           <input
