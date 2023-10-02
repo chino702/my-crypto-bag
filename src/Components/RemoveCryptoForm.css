@@ -1,6 +1,6 @@
 .remove-crypto-container {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     text-align: center;
   }
@@ -13,7 +13,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
-  }
+}
   
   .remove-crypto-form:hover {
     transform: scale(1.03);
@@ -46,15 +46,30 @@
     display: block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #6819fb;
+    background-color: #1961fb;
     color: white;
     border: none;
     border-radius: 3px;
     font-size: 1rem;
     cursor: pointer;
+    margin: 0 auto;
   }
   
   .remove-crypto-form button:hover {
-    background-color: #5b16e6;
+    background-color: #1961fbdb;
   }
   
+  @media (max-width: 768px) {
+
+    .remove-crypto-form h2 {
+      font-size: 1rem;
+    }
+  
+    .remove-crypto-form select {
+      width: 100%;
+    }
+  
+    .remove-crypto-form button {
+      margin: 0 auto;
+    }
+  }

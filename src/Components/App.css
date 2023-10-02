@@ -1,11 +1,11 @@
 .app-container {
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
   }
 
 .dashboard-container {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     text-align: center; 
 }
@@ -76,7 +76,22 @@
 .footer {
     text-align: center;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     color: #555;
+  }
+
+  @media (max-width: 768px) {
+
+    .add-crypto-form h2 {
+      font-size: 1rem;
+    }
+  
+    .add-crypto-form input {
+      width: 85%;
+    }
+  
+    .add-crypto-form button {
+      margin: 0 auto;
+    }
   }

@@ -1,7 +1,7 @@
 
 .add-crypto-form-container {
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #FFFFFF;
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
@@ -59,3 +59,18 @@
 .add-crypto-form button:hover {
     background-color: #1961fbdb;
 }
+
+@media (max-width: 768px) {
+
+    .add-crypto-form h2 {
+      font-size: 1rem;
+    }
+  
+    .add-crypto-form input {
+      width: 85%;
+    }
+  
+    .add-crypto-form button {
+      margin: 0 auto;
+    }
+  }
