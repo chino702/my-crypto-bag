@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function Dashboard() {
   // Initialize portfolioData as an empty array
@@ -13,15 +14,26 @@ function Dashboard() {
   }, []); // Empty dependency array ensures the effect runs once on mount
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>Crypto Portfolio</h2>
-      <ul>
+      <div className="crypto-list-container">
         {portfolioData.map((asset, index) => (
-          <li key={index}>
-            {asset.name} - Quantity: {asset.quantity}, Price: ${asset.price}, Value: ${asset.quantity * asset.price}
-          </li>
+          <div className="crypto-item" key={index}>
+            <h3>{asset.name}</h3>
+            <div className="crypto-item-details">
+              <p>
+                <strong>Quantity:</strong> {asset.quantity}
+              </p>
+              <p>
+                <strong>Price:</strong> ${asset.price}
+              </p>
+              <p>
+                <strong>Value:</strong> ${asset.quantity * asset.price}
+              </p>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
