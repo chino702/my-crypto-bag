@@ -3,6 +3,9 @@ import "./AddCryptoForm.css";
 
 function AddCryptoForm() {
   const [formData, setFormData] = useState({ name: "", quantity: "", price: "" });
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -22,13 +25,25 @@ function AddCryptoForm() {
         console.log("New crypto data:", data);
         // Reset the form after successful submission
         setFormData({ name: "", quantity: "", price: "" });
+        // Set success message
+        setSuccessMessage("Crypto successfully added!");
+        // Clear error message
+        setErrorMessage("");
       })
-      .catch((error) => console.error("Error adding crypto:", error));
+      .catch((error) => {
+        console.error("Error adding crypto:", error);
+        // Set error message
+        setErrorMessage("Error adding crypto. Please try again.");
+        // Clear success message
+        setSuccessMessage("");
+      });
   };
 
   return (
     <div className="add-crypto-form-container">
       <h2>Add Cryptocurrency</h2>
+         <p className="success-message">{successMessage}</p>
+         <p className="error-message">{errorMessage}</p>
       <form onSubmit={handleSubmit} className="add-crypto-form">
         <div>
           <label>Name:</label>
@@ -46,6 +61,7 @@ function AddCryptoForm() {
             name="quantity"
             value={formData.quantity}
             onChange={handleInputChange}
+            step="0.01"
           />
         </div>
         <div>
@@ -55,6 +71,7 @@ function AddCryptoForm() {
             name="price"
             value={formData.price}
             onChange={handleInputChange}
+            step="0.01"
           />
         </div>
         <button type="submit">Add Cryptocurrency</button>
