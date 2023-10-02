@@ -37,6 +37,12 @@ function AddCryptoForm() {
         // Clear success message
         setSuccessMessage("");
       });
+
+      setTimeout(() => {
+        setSuccessMessage("");
+        setErrorMessage("");
+      }, 3000);
+      
   };
 
   return (
