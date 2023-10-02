@@ -1,3 +1,8 @@
+.app-container {
+    background-color: #f7f7f7;
+    font-family: 'Roboto', sans-serif;
+  }
+
 .dashboard-container {
     padding: 20px;
     background-color: #f7f7f7;

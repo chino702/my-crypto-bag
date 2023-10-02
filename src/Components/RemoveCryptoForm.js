@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./RemoveCryptoForm.css";
 
 function RemoveCrypto() {
 
@@ -30,11 +31,15 @@ function RemoveCrypto() {
   };
 
   return (
-    <div>
+    <div className="remove-crypto-container"> 
       <h2>Remove Cryptocurrency</h2>
-      <form onSubmit={handleRemoveCrypto}>
+      <form className="remove-crypto-form" onSubmit={handleRemoveCrypto}> 
         <label>Select a cryptocurrency to remove:</label>
-        <select value={selectedCrypto} onChange={handleCryptoChange}>
+        <select
+          value={selectedCrypto}
+          onChange={handleCryptoChange}
+          className="crypto-select"
+        >
           <option value="" disabled>
             Select a cryptocurrency
           </option>
@@ -44,7 +49,9 @@ function RemoveCrypto() {
             </option>
           ))}
         </select>
-        <button type="submit">Remove</button>
+        <button type="submit" className="crypto-remove-button"> {/* Apply the CSS class to the button */}
+          Remove
+        </button>
       </form>
     </div>
   );

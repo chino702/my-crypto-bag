@@ -33,10 +33,7 @@ function Dashboard() {
             </div>
           </div>
         ))}
-      </div>
-      <div className="footer">
-        <p>&copy; 2023 My Crypto Bag</p>
-      </div>
+        </div>
     </div>
   );
 }
