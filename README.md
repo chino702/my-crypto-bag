@@ -78,6 +78,7 @@ Use the navigation bar to switch between different sections of the app.
 Add cryptocurrencies to your portfolio by filling out the "Add Cryptocurrency" form.
 Remove cryptocurrencies from your portfolio using the "Remove Cryptocurrency" form.
 View your portfolio on the dashboard.
+You can now sort through your cryptocurrencies Alphabetically or by Value.
 
 --------------------------------------------------------------
 

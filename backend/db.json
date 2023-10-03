@@ -1,12 +1,6 @@
 {
   "portfolio": [
     {
-      "id": 1,
-      "name": "Bitcoin",
-      "quantity": 0,
-      "price": 26600
-    },
-    {
       "id": 2,
       "name": "Ethereum",
       "quantity": 0,
@@ -35,6 +29,12 @@
       "name": "Cardano",
       "quantity": 0,
       "price": 0.2445
+    },
+    {
+      "name": "Bitcoin ",
+      "quantity": "1",
+      "price": "27400",
+      "id": 7
     }
   ]
 }
