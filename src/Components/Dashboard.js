@@ -6,15 +6,15 @@ function Dashboard() {
   const [portfolioData, setPortfolioData] = useState([]);
   const [sortingOption, setSortingOption] = useState("alphabetical");
 
-  // Fetch portfolio data from the backend once the component mounts
+  // Fetch portfolio data from the backend server
   useEffect(() => {
-    fetch("http://localhost:3000/portfolio") // Adjust the URL to match your backend route
+    fetch("http://localhost:3000/portfolio") 
       .then((response) => response.json())
       .then((data) => setPortfolioData(data))
       .catch((error) => console.error("Error fetching data:", error));
-  }, []); // Empty dependency array ensures the effect runs once on mount
+  }, []); 
 
-  // Function to sort the portfolio data
+  //Sort the cryptocurrency function
   const sortData = (data) => {
     if (sortingOption === "alphabetical") {
       return data.slice().sort((a, b) => a.name.localeCompare(b.name));
@@ -24,7 +24,7 @@ function Dashboard() {
     return data;
   };
 
-  // Function to handle sorting option change
+
   const handleSortingOptionChange = (option) => {
     setSortingOption(option);
   };
