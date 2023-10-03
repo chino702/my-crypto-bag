@@ -33,8 +33,8 @@ function Dashboard() {
     <div className="dashboard-container">
       <h2>Crypto Portfolio</h2>
       <div className="sorting-options">
-        <button onClick={() => handleSortingOptionChange("alphabetical")}>Sort Alphabetically</button>
-        <button onClick={() => handleSortingOptionChange("value")}>Sort by Value</button>
+        <button className="sort-button" onClick={() => handleSortingOptionChange("alphabetical")}>Sort Alphabetically</button>
+        <button className="sort-button" onClick={() => handleSortingOptionChange("value")}>Sort by Value</button>
       </div>
       <div className="crypto-list-container">
         {sortData(portfolioData).map((asset, index) => (

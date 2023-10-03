@@ -81,6 +81,29 @@
     color: #555;
   }
 
+  .sorting-options {
+    margin-bottom: 20px;
+  }
+  .sort-button {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #068af546;
+    color: rgb(8, 8, 8);
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  .sort-button:hover {
+    background-color: #1961fbdb;
+  }
+  
+  .sort-button.active {
+    background-color: #1961fbf2;
+  }
+
   @media (max-width: 768px) {
 
     .add-crypto-form h2 {
