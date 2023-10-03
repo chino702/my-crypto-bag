@@ -26,15 +26,17 @@ function RemoveCrypto() {
       method: "DELETE",
     })
     .then((response) => response.json())
+
     .then((data) => {
+
       console.log("Crypto removed", data);
-      // Set success message
+
       setSuccessMessage("Crypto successfully removed!");
-      // Clear error message
+
       setErrorMessage("");
-      // Clear the selectedCrypto state
+
       setSelectedCrypto("");
-      // Refetch the portfolio data to reflect the removal
+      
       fetch("http://localhost:3000/portfolio")
         .then((response) => response.json())
         .then((data) => setPortfolioData(data))
@@ -42,17 +44,17 @@ function RemoveCrypto() {
     })
     .catch((error) => {
       console.error("Error removing cryptocurrency", error);
-      // Set error message
+      
       setErrorMessage("Error removing crypto. Please try again.");
-      // Clear success message
+      
       setSuccessMessage("");
     });
 
-    // Clear success and error messages after 3 seconds
+   
     setTimeout(() => {
       setSuccessMessage("");
       setErrorMessage("");
-    }, 3000); // 3000 milliseconds (3 seconds)
+    }, 3000); 
 };
 
   return (

@@ -23,18 +23,18 @@ function AddCryptoForm() {
       .then((response) => response.json())
       .then((data) => {
         console.log("New crypto data:", data);
-        // Reset the form after successful submission
+        
         setFormData({ name: "", quantity: "", price: "" });
-        // Set success message
+        
         setSuccessMessage("Crypto successfully added!");
-        // Clear error message
+       
         setErrorMessage("");
       })
       .catch((error) => {
         console.error("Error adding crypto:", error);
-        // Set error message
+        
         setErrorMessage("Error adding crypto. Please try again.");
-        // Clear success message
+        
         setSuccessMessage("");
       });
 
