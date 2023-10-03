@@ -4,6 +4,7 @@ import "./App.css";
 function Dashboard() {
   // Initialize portfolioData as an empty array
   const [portfolioData, setPortfolioData] = useState([]);
+  const [sortingOption, setSortingOption] = useState("alphabetical");
 
   // Fetch portfolio data from the backend once the component mounts
   useEffect(() => {
@@ -13,11 +14,30 @@ function Dashboard() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []); // Empty dependency array ensures the effect runs once on mount
 
+  // Function to sort the portfolio data
+  const sortData = (data) => {
+    if (sortingOption === "alphabetical") {
+      return data.slice().sort((a, b) => a.name.localeCompare(b.name));
+    } else if (sortingOption === "value") {
+      return data.slice().sort((a, b) => a.price * a.quantity - b.price * b.quantity);
+    }
+    return data;
+  };
+
+  // Function to handle sorting option change
+  const handleSortingOptionChange = (option) => {
+    setSortingOption(option);
+  };
+
   return (
     <div className="dashboard-container">
       <h2>Crypto Portfolio</h2>
+      <div className="sorting-options">
+        <button onClick={() => handleSortingOptionChange("alphabetical")}>Sort Alphabetically</button>
+        <button onClick={() => handleSortingOptionChange("value")}>Sort by Value</button>
+      </div>
       <div className="crypto-list-container">
-        {portfolioData.map((asset, index) => (
+        {sortData(portfolioData).map((asset, index) => (
           <div className="crypto-item" key={index}>
             <h3>{asset.name}</h3>
             <div className="crypto-item-details">
@@ -33,7 +53,7 @@ function Dashboard() {
             </div>
           </div>
         ))}
-        </div>
+      </div>
     </div>
   );
 }
